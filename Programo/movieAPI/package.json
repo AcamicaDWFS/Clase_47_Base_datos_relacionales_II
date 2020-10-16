@@ -18,6 +18,9 @@
     "mariadb": "^2.4.2",
     "moment": "^2.29.0",
     "nodemon": "^2.0.4",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "swagger-jsdoc": "^4.3.0",
+    "swagger-ui-express": "^4.1.4",
+    "yamljs": "^0.3.0"
   }
 }

@@ -1,6 +1,26 @@
 const router = require("express").Router();
 const { Movie } = require("../../conexion");
 
+/**
+ * @swagger
+ * tags:
+ *   name: Movies
+ *   description: Movie management
+ */
+
+
+/**
+* @swagger
+* path:
+*  /movies/:
+*    get:
+*      summary: Get all movies
+*      description: Use to request all movies
+*      tags: [Movies]
+*      responses:
+*        '200':
+*          description: A successful response
+*/
 router.get("/", async (request, response) => {
     // response.send("Welcome. Working!");
     const movies = await Movie.findAll();

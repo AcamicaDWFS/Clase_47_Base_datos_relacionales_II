@@ -6,6 +6,22 @@ const apiRouter = require("./routes/api");
 
 require("./conexion");
 
+//////
+const swaggerUi = require("swagger-ui-express");
+const { swaggerOptions } = require("./swaggerOptions");
+const swaggerJsDoc = require("swagger-jsdoc");
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+
+// Primer modo con archivo YAML
+//const YAML = require('yamljs');
+//const swaggerDocument = YAML.load('./swagger.yaml');
+//app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+//////
+
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
